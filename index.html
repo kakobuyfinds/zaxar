@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#e9e2f5">
+  <meta name="color-scheme" content="light">
+  <title>BaseTao spreadsheet – svensk guide till mått, fynd och QC</title>
+  <meta name="description" content="Utforska BaseTao spreadsheet med en svensk urvalsguide. Jämför sneakers, kläder och accessoarer, kontrollera mått och QC-bilder och planera dina inköp.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:title" content="BaseTao spreadsheet – välj med bättre underlag">
+  <meta property="og:description" content="Kategorier, bildstudier och svenska guider som hjälper dig att jämföra produkter innan du bestämmer dig.">
+  <meta property="og:image" content="https://si.geilicdn.com/open1862809525-1234478995-07a000000193d01b44ca0aa0834c_800_800.jpg">
+  <meta property="og:image:alt" content="Katalogbild av en Nike Tech Fleece-jacka med huva">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BaseTao spreadsheet – svensk urvalsguide">
+  <meta name="twitter:description" content="Från första produktbild till genomtänkt urval: mått, detaljer, QC och fraktplanering.">
+  <link rel="preconnect" href="https://si.geilicdn.com" crossorigin>
+  <!--
+    Filnamn: index.html. Fristående svensk sida med inbäddad CSS, utan JavaScript.
+    Sökunderlag: BaseTao spreadsheet, granskat 5 november 2026.
+    Googles resultatsida kunde inte hämtas. Följande tio relevanta sökträffar
+    är därför ett researchurval, inte en verifierad första resultatsida på Google:
+    linktr.ee/basetao: länksamling, guider och spreadsheet.
+    basetaoglobal.com: kategorier, produktfynd och orderöversikt.
+    basetaoship.com: kategorier och fraktteman.
+    basetaosale.com: produktnavigation och bevakningsteman.
+    basetaotrade.com: kategorier och produktjämförelse.
+    basetaoimport.com: produktfynd och inköpsteman.
+    basetaoreps.com: produktkontroll och planering.
+    basetao-spreadsheet.org: research, mått, jämförelser och QC.
+    basetao-link.com: produktlänkar, QC och vanliga frågor.
+    basetao.help: introduktion, mallar och hjälp.
+    Fem av webbplatserna blockerade direkt hämtning; deras sökmetadata användes.
+    Inga kampanjer, betyg, produktantal eller servicegarantier har återanvänts.
+    Fyra sekundära teman: BaseTao produktguide, BaseTao storleksguide,
+    BaseTao QC-guide och BaseTao fraktplanering. Längre sökfrågor behandlas
+    naturligt i artiklar, bildstudier och FAQ, utan separata sökordslistor.
+    Lägg till en självrefererande canonical först när publiceringsadressen är känd.
+  -->
+  <style>
+    :root {
+      --paper: #f8f7f3;
+      --ink: #24202e;
+      --muted: #5d5769;
+      --line: #d8d2df;
+      --lilac: #e9e2f5;
+      --lime: #dcf58c;
+      --white: #fff;
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.65;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body { margin: 0; }
+    a { color: inherit; text-underline-offset: 4px; }
+    a:hover { text-decoration-thickness: 2px; }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid #6a38a5;
+      outline-offset: 5px;
+    }
+
+    img { display: block; max-width: 100%; height: auto; }
+    h1, h2, h3, p, figure { margin: 0; }
+
+    h1, h2, h3 {
+      line-height: 1.13;
+      letter-spacing: -.035em;
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 5.7vw, 5.3rem);
+      font-weight: 750;
+      max-width: 12ch;
+    }
+
+    h2 { font-size: clamp(1.8rem, 3.4vw, 2.8rem); }
+    h3 { font-size: 1.18rem; letter-spacing: -.02em; }
+    p + p { margin-top: 1rem; }
+
+    .wrap {
+      width: min(1200px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding-block: 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      font-weight: 850;
+      letter-spacing: -.06em;
+      text-decoration: none;
+      font-size: 1.55rem;
+    }
+
+    .brand span {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      background: var(--ink);
+      color: var(--lime);
+      border-radius: 50%;
+      margin-right: 9px;
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+
+    .label {
+      font-size: .74rem;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      font-weight: 750;
+    }
+
+    .muted { color: var(--muted); }
+    .categories { padding-block: 22px 28px; }
+
+    .section-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .section-top h2 { font-size: 1.05rem; letter-spacing: 0; }
+
+    .category-grid {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .category-grid a {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      min-height: 64px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      text-decoration: none;
+      background: var(--white);
+      font-size: .88rem;
+      font-weight: 650;
+      overflow-wrap: anywhere;
+    }
+
+    .category-grid a:hover {
+      background: var(--lilac);
+      border-color: var(--ink);
+    }
+
+    .category-grid span {
+      color: var(--muted);
+      font-size: .73rem;
+      font-variant-numeric: tabular-nums;
+      font-weight: 500;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--lilac);
+    }
+
+    .hero-copy {
+      padding: clamp(24px, 4vw, 52px);
+      align-self: center;
+    }
+
+    .hero-copy .label { margin-bottom: 22px; }
+
+    .hero-copy h1 em {
+      font-style: normal;
+      background: var(--lime);
+      padding-inline: 5px;
+    }
+
+    .intro {
+      font-size: 1.08rem;
+      max-width: 49ch;
+      margin-top: 26px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 48px;
+      padding: 12px 21px;
+      border-radius: 8px;
+      background: var(--ink);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .button:hover { background: #453353; }
+    .hero-copy .button { margin-top: 24px; }
+
+    .hero-note {
+      font-size: .81rem;
+      margin-top: 13px;
+      color: var(--muted);
+    }
+
+    .hero-figure {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      min-width: 0;
+    }
+
+    .hero-figure img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+    }
+
+    .hero-figure figcaption {
+      padding: 14px 22px;
+      border-top: 1px solid var(--line);
+      font-size: .81rem;
+      color: var(--muted);
+      margin-top: auto;
+    }
+
+    .quick-answer {
+      display: grid;
+      grid-template-columns: 1fr 2.4fr;
+      gap: 30px;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 64px;
+    }
+
+    .quick-answer h2 { font-size: 1.15rem; }
+    .quick-answer p { max-width: 80ch; }
+    .section { margin-block: 64px; }
+
+    .section-lead {
+      max-width: 68ch;
+      color: var(--muted);
+      margin-top: 15px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .study {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .study img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+      background: #fff;
+    }
+
+    .study figcaption { padding: 20px; }
+
+    .study .label {
+      display: block;
+      color: var(--muted);
+      font-size: .65rem;
+      margin-bottom: 10px;
+    }
+
+    .study h3 { font-size: 1.08rem; }
+    .study p { font-size: .9rem; margin-top: 12px; }
+
+    .study a {
+      display: inline-block;
+      margin-top: 15px;
+      font-size: .85rem;
+      font-weight: 700;
+    }
+
+    .notice {
+      font-size: .82rem;
+      color: var(--muted);
+      max-width: 95ch;
+      margin-top: 17px;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: .8fr 1.8fr;
+      gap: 40px;
+      padding: 32px;
+      border-radius: var(--radius);
+      background: var(--lime);
+    }
+
+    .comparison h2 { font-size: 2rem; }
+    .comparison p { margin-top: 16px; }
+    .table-scroll { overflow-x: auto; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .9rem;
+      text-align: left;
+    }
+
+    caption {
+      text-align: left;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    th, td {
+      padding: 13px 10px;
+      border-bottom: 1px solid #b6c67c;
+      vertical-align: top;
+    }
+
+    thead th { padding-top: 0; }
+    tbody th { min-width: 115px; }
+    td { min-width: 165px; }
+    tbody tr:last-child > * { border-bottom: 0; }
+
+    .editorial {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 28px;
+    }
+
+    .article {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      padding: 30px;
+    }
+
+    .article .number {
+      display: inline-block;
+      background: var(--lilac);
+      padding: 3px 11px;
+      border-radius: 6px;
+      font-size: .78rem;
+      font-weight: 750;
+      margin-bottom: 17px;
+    }
+
+    .article h2 { font-size: 1.75rem; }
+    .article > p { margin-top: 16px; color: var(--muted); }
+
+    .article h3 {
+      font-size: 1.03rem;
+      line-height: 1.35;
+      margin-top: 25px;
+    }
+
+    .article h3 + p { font-size: .95rem; margin-top: 8px; }
+
+    .article .takeaway {
+      margin-top: 25px;
+      padding: 15px;
+      border-left: 3px solid #8368aa;
+      background: #f5f1fa;
+      color: var(--ink);
+      font-size: .9rem;
+    }
+
+    .faq-layout {
+      display: grid;
+      grid-template-columns: .8fr 1.8fr;
+      gap: 48px;
+    }
+
+    .faq-layout header p { margin-top: 16px; color: var(--muted); }
+    details { border-bottom: 1px solid var(--line); }
+    details:first-child { border-top: 1px solid var(--line); }
+
+    summary {
+      padding: 20px 28px 20px 0;
+      cursor: pointer;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    details p {
+      padding: 0 0 21px;
+      font-size: .95rem;
+      max-width: 75ch;
+    }
+
+    .closing {
+      padding: 32px;
+      background: var(--lilac);
+      border-radius: var(--radius);
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .closing h2 { font-size: 1.6rem; }
+    .closing p { margin-top: 10px; max-width: 68ch; }
+    .closing .button { flex-shrink: 0; }
+
+    footer {
+      padding: 30px 0 42px;
+      border-top: 1px solid var(--line);
+      font-size: .82rem;
+      color: var(--muted);
+    }
+
+    footer p { max-width: 100ch; }
+
+    footer .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 20px;
+      font-weight: 650;
+    }
+
+    @media (min-width: 1050px) {
+      .hero-figure img { min-height: 500px; }
+    }
+
+    @media (max-width: 900px) {
+      .category-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .hero { grid-template-columns: 1fr 1fr; }
+      .hero-copy { padding: 28px; }
+      h1 { font-size: 3.1rem; }
+      .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .comparison, .faq-layout { grid-template-columns: 1fr; gap: 24px; }
+      .editorial { gap: 16px; }
+      .article { padding: 24px; }
+      .closing { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (max-width: 600px) {
+      .wrap { width: calc(100% - 28px); }
+      .top { padding-block: 16px; }
+      .top > .label { font-size: .61rem; max-width: 15ch; text-align: right; }
+      .brand { font-size: 1.3rem; }
+      .categories { padding-block: 18px; }
+      .section-top { align-items: flex-start; }
+      .section-top .muted { font-size: .75rem; }
+      .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+      .category-grid a { min-height: 54px; padding: 10px; font-size: .78rem; gap: 8px; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-copy { padding: 30px 24px; }
+      h1 { font-size: 3.35rem; max-width: 12ch; }
+      .hero-figure img { max-height: 360px; object-fit: contain; }
+      .quick-answer { grid-template-columns: 1fr; gap: 12px; padding-block: 24px; margin-bottom: 42px; }
+      .section { margin-block: 44px; }
+      .gallery { gap: 10px; }
+      .study figcaption { padding: 15px; }
+      .study h3 { font-size: 1rem; }
+      .study p { font-size: .85rem; }
+      .comparison { padding: 23px; }
+      .editorial { grid-template-columns: 1fr; }
+      .faq-layout { gap: 24px; }
+      .closing { padding: 24px; }
+      .closing .button { width: 100%; }
+      .footer-row { flex-direction: column; gap: 8px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "#webbsida",
+        "name": "BaseTao spreadsheet – svensk guide till mått, fynd och QC",
+        "description": "En fristående svensk urvalsguide med produktkategorier, bildstudier, måttjämförelser och fraktplanering.",
+        "inLanguage": "sv",
+        "about": {
+          "@type": "Thing",
+          "name": "Produktresearch med BaseTao spreadsheet"
+        },
+        "hasPart": [
+          {"@id": "#produktguide"},
+          {"@id": "#storleksguide"},
+          {"@id": "#qc-guide"},
+          {"@id": "#fraktplanering"},
+          {"@id": "#fragor"}
+        ]
+      },
+      {
+        "@type": "Article",
+        "@id": "#produktguide",
+        "headline": "BaseTao produktguide: gör urvalet användbart",
+        "description": "Börja med användningen, skilj liknande annonser åt och dokumentera vad du fortfarande behöver veta.",
+        "inLanguage": "sv",
+        "isPartOf": {"@id": "#webbsida"},
+        "author": {"@type": "Organization", "name": "Urvalsloggen"}
+      },
+      {
+        "@type": "Article",
+        "@id": "#storleksguide",
+        "headline": "BaseTao storleksguide: jämför plagget, inte etiketten",
+        "description": "Fotlängd, plaggmått och rörelsevidd ger ett tydligare underlag än enbart storleksbokstäver.",
+        "inLanguage": "sv",
+        "isPartOf": {"@id": "#webbsida"},
+        "author": {"@type": "Organization", "name": "Urvalsloggen"}
+      },
+      {
+        "@type": "Article",
+        "@id": "#qc-guide",
+        "headline": "BaseTao QC-guide: ställ en fråga till varje bild",
+        "description": "Använd QC-bilder för synliga detaljer och be om kompletteringar när en viktig egenskap inte framgår.",
+        "inLanguage": "sv",
+        "isPartOf": {"@id": "#webbsida"},
+        "author": {"@type": "Organization", "name": "Urvalsloggen"}
+      },
+      {
+        "@type": "Article",
+        "@id": "#fraktplanering",
+        "headline": "BaseTao fraktplanering: räkna med det som saknas",
+        "description": "Håll produktkostnad, transport och övriga avgifter åtskilda. Markera osäkra uppgifter innan du jämför totalsummor.",
+        "inLanguage": "sv",
+        "isPartOf": {"@id": "#webbsida"},
+        "author": {"@type": "Organization", "name": "Urvalsloggen"}
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "#fragor",
+        "inLanguage": "sv",
+        "isPartOf": {"@id": "#webbsida"},
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Vad betyder BaseTao spreadsheet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Uttrycket används om samlingar av produktlänkar och jämförelseuppgifter för den som undersöker köp via BaseTao. Samlingen kan vara ett kalkylblad eller en webböversikt. Den ersätter inte säljarens aktuella information."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hur hittar jag sneakers och kläder via kategorierna?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Välj en kategori högst upp. Skor, huvtröjor, T-shirts, jackor och övriga kategorier öppnar motsvarande sida hos HipobuyFind. Övriga kataloglänkar öppnar HipobuyFinds startsida."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Är detta BaseTaos officiella webbplats?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nej. Urvalsloggen är en fristående informationssida utan officiell koppling till BaseTao eller de nämnda varumärkena. Kataloglänkarna leder till HipobuyFind."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kan jag använda samma storlek för alla märken?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nej. Jämför måtten för den exakta modellen och varianten med ett plagg som passar dig. För skor behöver du kontrollera modellens storlekstabell, fotlängd och hur tabellens mått definieras."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bevisar QC-bilder att en produkt är äkta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nej. QC-bilder visar bara de synliga egenskaper som faktiskt går att bedöma i bilderna. De bevisar inte ursprung, materialsammansättning, hållbarhet eller äkthet."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hur beräknar jag ett köp när frakten är okänd?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Skriv upp kända produktkostnader och markera frakten som okänd. Lägg till en separat preliminär uppskattning om du har ett underlag, men fatta beslut utifrån en aktuell offert när vikt, mått och leveransalternativ är kända."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Vad gör jag om en produktlänk inte längre fungerar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sök efter produkten i rätt kategori och kontrollera säljare, modell och variant på nytt. En liknande bild räcker inte för att bekräfta att en ny annons gäller samma vara."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kan jag beställa direkt på den här sidan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nej. Här finns guider och vidare länkar. Kontrollera beställning, betalning, returvillkor och eventuell agentkompatibilitet hos den aktör du väljer innan du betalar."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/zaxar/">
+</head>
+<body>
+  <header class="wrap top">
+    <a class="brand" href="https://www.hipobuyfind.com" aria-label="Urvalsloggen – öppna HipobuyFind">
+      <span aria-hidden="true">U</span>Urvalsloggen
+    </a>
+    <p class="label">Svenska guider · självständiga val</p>
+  </header>
+
+  <main class="wrap" id="innehall">
+    <nav class="categories" aria-labelledby="kategorier-rubrik">
+      <div class="section-top">
+        <h2 id="kategorier-rubrik">Börja med en kategori</h2>
+        <p class="muted">Vidare till HipobuyFind ↗</p>
+      </div>
+      <ul class="category-grid">
+        <li><a href="https://hipobuyfind.com/category-911-Shoes.html"><span aria-hidden="true">01</span>Skor</a></li>
+        <li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html"><span aria-hidden="true">02</span>Huvtröjor / tröjor</a></li>
+        <li><a href="https://hipobuyfind.com/category-913-T-Shirts.html"><span aria-hidden="true">03</span>T-shirts</a></li>
+        <li><a href="https://hipobuyfind.com/category-914-Jackets.html"><span aria-hidden="true">04</span>Jackor</a></li>
+        <li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html"><span aria-hidden="true">05</span>Byxor / shorts</a></li>
+        <li><a href="https://hipobuyfind.com/category-916-Headwear.html"><span aria-hidden="true">06</span>Kepsar / mössor</a></li>
+        <li><a href="https://hipobuyfind.com/category-917-Sets.html"><span aria-hidden="true">07</span>Matchande set</a></li>
+        <li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html"><span aria-hidden="true">08</span>Underkläder</a></li>
+        <li><a href="https://hipobuyfind.com/category-919-Jersey.html"><span aria-hidden="true">09</span>Matchtröjor</a></li>
+        <li><a href="https://hipobuyfind.com/category-920-Accessories.html"><span aria-hidden="true">10</span>Accessoarer</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero" aria-labelledby="huvudrubrik">
+      <div class="hero-copy">
+        <p class="label">En liten handbok för ditt nästa urval</p>
+        <h1 id="huvudrubrik">BaseTao spreadsheet.<br>Se detaljerna.<br><em>Välj med eftertanke.</em></h1>
+        <p class="intro">En snygg bild är en början. Mått, materialuppgifter och rätt variant gör jämförelsen användbar. Här får du ett svenskt arbetssätt för att undersöka kläder och accessoarer innan du bestämmer dig.</p>
+        <a class="button" href="https://www.hipobuyfind.com">Utforska katalogen hos HipobuyFind ↗</a>
+        <p class="hero-note">Fristående guide. Kontrollera alltid den aktuella annonsen.</p>
+      </div>
+      <figure class="hero-figure">
+        <img src="https://si.geilicdn.com/open1862809525-1234478995-07a000000193d01b44ca0aa0834c_800_800.jpg" alt="Katalogbild av en Nike Tech Fleece-jacka med huva" width="800" height="800" loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>Nike Tech Fleece enligt katalogens benämning. Jämför huva, dragkedja och plaggmått för den variant du överväger.</figcaption>
+      </figure>
+    </section>
+
+    <section class="quick-answer" aria-labelledby="kort-svar">
+      <h2 id="kort-svar">Vad är en spreadsheet i det här sammanhanget?</h2>
+      <p>En <strong>BaseTao spreadsheet</strong> samlar produktlänkar och uppgifter som hjälper dig att jämföra möjliga köp. Den kan vara ett kalkylblad eller en webböversikt. Använd den som startpunkt för din research; bekräfta sedan säljare, variant och villkor där köpet faktiskt genomförs.</p>
+    </section>
+
+    <section class="section" aria-labelledby="bildstudier">
+      <p class="label">Bildstudier / fyra saker att undersöka</p>
+      <h2 id="bildstudier">Låt varje detalj besvara en fråga.</h2>
+      <p class="section-lead">Varumärkesnamnet beskriver hur katalogen benämner bilden. Det viktiga i ditt urval är vilka egenskaper du behöver kontrollera för just den produkttypen.</p>
+
+      <div class="gallery">
+        <figure class="study">
+          <img src="https://si.geilicdn.com/open1648936853-1234478995-7f0b000001975f2be0b80a231226-unadjust_571_581.png" alt="Katalogbild av en axelremsväska med Louis Vuitton Multicolore-monogram" width="571" height="581" loading="lazy" decoding="async">
+          <figcaption>
+            <span class="label">Louis Vuitton / proportioner</span>
+            <h3>Hur stor är väskan i vardagen?</h3>
+            <p>Jämför bredd, höjd och djup med det du vill bära. Ett närfoto säger lite om utrymmet för mobil, nycklar och plånbok.</p>
+            <a href="https://www.hipobuyfind.com">Öppna HipobuyFind ↗</a>
+          </figcaption>
+        </figure>
+
+        <figure class="study">
+          <img src="https://si.geilicdn.com/pcitem1886999317-412b000001956f7b6b2c0a230115_1200_1200.jpg" alt="Katalogbild av en Gucci Dionysus-väska med GG-mönster och röd kant" width="1200" height="1200" loading="lazy" decoding="async">
+          <figcaption>
+            <span class="label">Gucci / stängning</span>
+            <h3>Vilka bilder behövs på ett lås?</h3>
+            <p>Be om en öppen och en stängd vy. Kontrollera hur lås, kanter och remfästen ser ut utan att dra slutsatser om funktion från en enda vinkel.</p>
+            <a href="https://www.hipobuyfind.com">Öppna HipobuyFind ↗</a>
+          </figcaption>
+        </figure>
+
+        <figure class="study">
+          <img src="https://si.geilicdn.com/open1623462477-1234478995-34a000000194e28a5abe0a8115b5_800_800.jpg" alt="Katalogbild av ett svart skärp med guldfärgat H-spänne, benämnt Hermès Constance" width="800" height="800" loading="lazy" decoding="async">
+          <figcaption>
+            <span class="label">Hermès / längd</span>
+            <h3>Hur mäts ett skärp för passform?</h3>
+            <p>Kontrollera om längden avser hela remmen eller avståndet till ett hål. Jämför samma mätmetod med ett skärp du redan använder.</p>
+            <a href="https://www.hipobuyfind.com">Öppna HipobuyFind ↗</a>
+          </figcaption>
+        </figure>
+
+        <figure class="study">
+          <img src="https://si.geilicdn.com/open1623462477-1234478995-25080000019744b0f6d80a231226_1200_1200.jpg" alt="Katalogbild av en Dior Book Tote-väska med monogrammönster" width="1200" height="1200" loading="lazy" decoding="async">
+          <figcaption>
+            <span class="label">Dior / konstruktion</span>
+            <h3>Hur jämförs handtag och sömmar?</h3>
+            <p>Se efter närbilder av infästningar, hörn och insida. Handtagets fria höjd behöver anges separat om väskan ska bäras över axeln.</p>
+            <a href="https://www.hipobuyfind.com">Öppna HipobuyFind ↗</a>
+          </figcaption>
+        </figure>
+      </div>
+
+      <p class="notice">Bilderna är katalogexempel för visuell research. De innebär ingen verifiering av äkthet, lagerstatus eller material. Sidan har ingen officiell koppling till Nike, Louis Vuitton, Gucci, Hermès eller Dior.</p>
+    </section>
+
+    <section class="section comparison" aria-labelledby="jamforelse">
+      <div>
+        <p class="label">Din jämförelserad</p>
+        <h2 id="jamforelse">Spara det som annars försvinner mellan flikarna.</h2>
+        <p>En användbar rad i din BaseTao spreadsheet ska skilja ett känt faktum från en öppen fråga. Skriv ”okänt” när underlaget saknas.</p>
+      </div>
+      <div class="table-scroll" role="region" aria-label="Förslag till jämförelsefält" tabindex="0">
+        <table>
+          <caption>Sex fält för en tydligare produktjämförelse</caption>
+          <thead>
+            <tr>
+              <th scope="col">Fält</th>
+              <th scope="col">Anteckna</th>
+              <th scope="col">Kontrollfråga</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Källa</th>
+              <td>Produktlänk, säljare och datum</td>
+              <td>Går annonsen fortfarande att öppna?</td>
+            </tr>
+            <tr>
+              <th scope="row">Variant</th>
+              <td>Modell, färg, storlek och antal</td>
+              <td>Jämför jag samma utförande?</td>
+            </tr>
+            <tr>
+              <th scope="row">Mått</th>
+              <td>Värde, enhet och mätmetod</td>
+              <td>Vad mättes och hur?</td>
+            </tr>
+            <tr>
+              <th scope="row">Material</th>
+              <td>Säljarens uppgift och osäkerheter</td>
+              <td>Är detta beskrivet eller bara antaget?</td>
+            </tr>
+            <tr>
+              <th scope="row">Kostnad</th>
+              <td>Valuta, kända poster och saknade avgifter</td>
+              <td>Vad ingår inte i beloppet?</td>
+            </tr>
+            <tr>
+              <th scope="row">Nästa steg</th>
+              <td>En konkret fråga eller kontroll</td>
+              <td>Vad behöver jag veta innan beslutet?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="guider">
+      <p class="label">Läs vidare här / fyra korta teman</p>
+      <h2 id="guider">Från första fynd till tydligt beslutsunderlag.</h2>
+      <p class="section-lead">Dessa fyra guider hjälper dig att använda produktlänkar på ett praktiskt sätt. Börja med den fråga som fortfarande är obesvarad.</p>
+
+      <div class="editorial">
+        <article class="article" id="produktguide" aria-labelledby="produktguide-rubrik">
+          <span class="number">01 / Urval</span>
+          <h2 id="produktguide-rubrik">BaseTao produktguide: gör urvalet användbart</h2>
+          <p>Börja med användningen, skilj liknande annonser åt och dokumentera vad du fortfarande behöver veta.</p>
+
+          <h3>Hur hittar jag produktfynd som passar min vardag?</h3>
+          <p>Beskriv behovet innan du bläddrar. En tröja för lager på lager behöver annan passform än en rymlig yttertröja. Välj sedan två eller tre relevanta alternativ och jämför dem med samma frågor.</p>
+
+          <h3>Hur jämför jag liknande produktannonser?</h3>
+          <p>Läs modellnamn, vald variant och materialuppgifter var för sig. Identiska bilder kan förekomma i flera annonser. Spara därför både produktlänken och säljarens namn; bilden räcker inte för att skilja alternativen åt.</p>
+
+          <h3>Vad ska jag kontrollera på kepsar och smycken?</h3>
+          <p>För huvudbonader: omkrets, djup och justering. För ringar och halsband: mått, storlekssystem, stängning och angiven materialsammansättning. Om en viktig materialuppgift saknas, fråga efter den innan du väljer.</p>
+
+          <p class="takeaway"><strong>Nästa steg:</strong> skriv ett användningsbehov och en obesvarad fråga för varje kandidat.</p>
+        </article>
+
+        <article class="article" id="storleksguide" aria-labelledby="storleksguide-rubrik">
+          <span class="number">02 / Passform</span>
+          <h2 id="storleksguide-rubrik">BaseTao storleksguide: jämför plagget, inte etiketten</h2>
+          <p>Fotlängd, plaggmått och rörelsevidd ger ett tydligare underlag än enbart storleksbokstäver.</p>
+
+          <h3>Hur väljer jag sneakers efter fotlängd?</h3>
+          <p>Mät båda fötterna och utgå från den längsta. Kontrollera om modellens tabell visar rekommenderad fotlängd, innermått eller något annat. Blanda inte dessa värden och anta inte att samma EU-storlek passar i varje modell.</p>
+
+          <h3>Hur jämför jag mått på en hoodie eller T-shirt?</h3>
+          <p>Lägg ett plagg som passar plant och mät bröstbredd, längd och ärm enligt annonsens metod. En platt bredd är inte samma uppgift som kroppens omkrets. Ta också hänsyn till om plagget ska sitta nära eller ledigt.</p>
+
+          <h3>Vilka mått behövs för jackor och byxor?</h3>
+          <p>För jackor är plats för lager under plagget relevant. För byxor: midja, höft, gren och innerbenslängd. Kontrollera om midjemåttet avser ett avslappnat eller utsträckt resårband; det påverkar jämförelsen.</p>
+
+          <p class="takeaway"><strong>Nästa steg:</strong> spara referensplaggets mått i centimeter tillsammans med mätmetoden.</p>
+        </article>
+
+        <article class="article" id="qc-guide" aria-labelledby="qc-guide-rubrik">
+          <span class="number">03 / Bildkontroll</span>
+          <h2 id="qc-guide-rubrik">BaseTao QC-guide: ställ en fråga till varje bild</h2>
+          <p>Använd QC-bilder för synliga detaljer och be om kompletteringar när en viktig egenskap inte framgår.</p>
+
+          <h3>Hur läser jag QC-bilder på kläder?</h3>
+          <p>QC betyder kvalitetskontroll. Börja med helhetsbilden: motsvarar modell och variant det du avsåg? Titta därefter på synliga fläckar, sömmar och etiketter. Skilj mellan det bilden visar och det som fortfarande är oklart.</p>
+
+          <h3>Hur jämför jag färg mellan olika produktbilder?</h3>
+          <p>Ljus, vitbalans och bildbehandling kan ge olika intryck av samma nyans. Om färgen är avgörande, be om bilder i jämn belysning och med en neutral referens. En skärmbild ger ingen säker färgmatchning.</p>
+
+          <h3>När behöver jag fler detaljbilder eller mått?</h3>
+          <p>När beslutet beror på en egenskap som inte syns. Be exempelvis om ett måttband över bröstbredden, en närbild av ett skadat hörn eller en vy av stängningen. Kontrollera först om den valda tjänsten kan utföra kontrollen.</p>
+
+          <p class="takeaway"><strong>Nästa steg:</strong> formulera en specifik bildförfrågan, till exempel ”visa vänster remfäste nära”.</p>
+        </article>
+
+        <article class="article" id="fraktplanering" aria-labelledby="fraktplanering-rubrik">
+          <span class="number">04 / Planering</span>
+          <h2 id="fraktplanering-rubrik">BaseTao fraktplanering: räkna med det som saknas</h2>
+          <p>Håll produktkostnad, transport och övriga avgifter åtskilda. Markera osäkra uppgifter innan du jämför totalsummor.</p>
+
+          <h3>Vilka kostnader ska finnas i en inköpskalkyl?</h3>
+          <p>Anteckna varans belopp, valuta och antal. Lägg till kända kostnader för inrikes transport, tjänster, internationell frakt och eventuella övriga avgifter. Saknade belopp ska förbli öppna poster, inte räknas som noll.</p>
+
+          <h3>Hur planerar jag frakt innan paketet är färdigt?</h3>
+          <p>Använd en uppskattning som ett planeringsunderlag och skriv vilka vikt- och måttuppgifter den bygger på. Jämför tillgängliga alternativ igen när paketets uppgifter är kända. Läs vad respektive offert faktiskt omfattar.</p>
+
+          <h3>Vad behöver jag kontrollera om retur och tidsfrister?</h3>
+          <p>Spara säljarens aktuella villkor och när du behöver agera. En eventuell lagringstid säger inte i sig hur länge en retur kan begäras. Be om besked innan en oklar tidsfrist passerar.</p>
+
+          <p class="takeaway"><strong>Nästa steg:</strong> håll uppskattningar och bekräftade belopp i separata kolumner.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section faq-layout" id="fragor" aria-labelledby="faq-rubrik">
+      <header>
+        <p class="label">Frågor med raka svar</p>
+        <h2 id="faq-rubrik">Det du vill veta innan du går vidare.</h2>
+        <p>En BaseTao spreadsheet hjälper till att ordna research. Den ersätter inte aktuella produktuppgifter eller villkoren hos den aktör du använder.</p>
+      </header>
+
+      <div>
+        <details open>
+          <summary>Vad betyder BaseTao spreadsheet?</summary>
+          <p>Uttrycket används om samlingar av produktlänkar och jämförelseuppgifter för den som undersöker köp via BaseTao. Samlingen kan vara ett kalkylblad eller en webböversikt. Den ersätter inte säljarens aktuella information.</p>
+        </details>
+
+        <details>
+          <summary>Hur hittar jag sneakers och kläder via kategorierna?</summary>
+          <p>Välj en kategori högst upp. Skor, huvtröjor, T-shirts, jackor och övriga kategorier öppnar motsvarande sida hos HipobuyFind. Övriga kataloglänkar öppnar HipobuyFinds startsida.</p>
+        </details>
+
+        <details>
+          <summary>Är detta BaseTaos officiella webbplats?</summary>
+          <p>Nej. Urvalsloggen är en fristående informationssida utan officiell koppling till BaseTao eller de nämnda varumärkena. Kataloglänkarna leder till HipobuyFind.</p>
+        </details>
+
+        <details>
+          <summary>Kan jag använda samma storlek för alla märken?</summary>
+          <p>Nej. Jämför måtten för den exakta modellen och varianten med ett plagg som passar dig. För skor behöver du kontrollera modellens storlekstabell, fotlängd och hur tabellens mått definieras.</p>
+        </details>
+
+        <details>
+          <summary>Bevisar QC-bilder att en produkt är äkta?</summary>
+          <p>Nej. QC-bilder visar bara de synliga egenskaper som faktiskt går att bedöma i bilderna. De bevisar inte ursprung, materialsammansättning, hållbarhet eller äkthet.</p>
+        </details>
+
+        <details>
+          <summary>Hur beräknar jag ett köp när frakten är okänd?</summary>
+          <p>Skriv upp kända produktkostnader och markera frakten som okänd. Lägg till en separat preliminär uppskattning om du har ett underlag, men fatta beslut utifrån en aktuell offert när vikt, mått och leveransalternativ är kända.</p>
+        </details>
+
+        <details>
+          <summary>Vad gör jag om en produktlänk inte längre fungerar?</summary>
+          <p>Sök efter produkten i rätt kategori och kontrollera säljare, modell och variant på nytt. En liknande bild räcker inte för att bekräfta att en ny annons gäller samma vara.</p>
+        </details>
+
+        <details>
+          <summary>Kan jag beställa direkt på den här sidan?</summary>
+          <p>Nej. Här finns guider och vidare länkar. Kontrollera beställning, betalning, returvillkor och eventuell agentkompatibilitet hos den aktör du väljer innan du betalar.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section closing" aria-labelledby="nasta-steg">
+      <div>
+        <h2 id="nasta-steg">Välj en kategori. Spara en bra fråga.</h2>
+        <p>Öppna katalogen och bygg ett litet urval. När mått, variant och öppna frågor finns på samma rad blir nästa beslut lättare att bedöma.</p>
+      </div>
+      <a class="button" href="https://www.hipobuyfind.com">Fortsätt till HipobuyFind ↗</a>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p><strong>Om Urvalsloggen:</strong> fristående svensk vägledning för produktresearch. Vi tar inte emot beställningar eller betalningar. Märkesnamn används för att beskriva katalogbilder och innebär ingen officiell anknytning eller garanti om produkterna. Aktuella uppgifter och köpbeslut behöver kontrolleras hos den valda aktören.</p>
+    <div class="footer-row">
+      <span>Urvalsloggen · Svensk utgåva</span>
+      <a href="https://www.hipobuyfind.com">Besök HipobuyFind ↗</a>
+    </div>
+  </footer>
+</body>
+</html>
